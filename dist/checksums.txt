@@ -1,2 +1,0 @@
-1b41125fd72d62982f1306361d7c599aeea8d14057ff4f17b0a7e93b697f09a6  tbn-contour-authserver_0.1.1_Linux_x86_64.tar.gz
-2db1c335956c24e91e63055f73b064504c36693d249e20611134a92b9545ede1  tbn-contour-authserver_0.1.1_Darwin_x86_64.tar.gz

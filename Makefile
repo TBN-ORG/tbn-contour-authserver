@@ -82,7 +82,7 @@ docker-push: ## Push the docker image
 .PHONY: release
 release: ## Build and publish a release to Github
 	# Check there is a token.
-	[[ -n "$$GITHUB_TOKEN" ]] || [[ -r ~/.config/goreleaser/github_token ]]
+	#[[ -n "$$GITHUB_TOKEN" ]] || [[ -r ~/.config/goreleaser/github_token ]]
 	# Check we are on a tag.
 	git describe --exact-match >/dev/null
 	# Do a full dry-run.

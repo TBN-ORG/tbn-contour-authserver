@@ -8,8 +8,8 @@ resources:
 
 images:
 - name: controller
-  newName: tbn-contour-authserver
-  newTag: v0.1.4
+  newName: rfinner/tbn-contour-authserver
+  newTag: v0.1.5
 - name: testserver
   newName: tbn-contour-authserver
   newTag: latest

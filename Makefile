@@ -21,7 +21,7 @@ GO_BUILD_LDFLAGS := \
 	-X $(REPO)/pkg/version.BuildDate=$(BUILDDATE)
 
 # Image URL to use all building/pushing image targets
-IMG ?= $(BIN):$(VERSION)
+IMG ?= rfinner/$(BIN):$(VERSION)
 
 all: build
 

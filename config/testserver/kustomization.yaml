@@ -7,6 +7,9 @@ resources:
 - certificate.yaml
 
 images:
+- name: controller
+  newName: tbn-contour-authserver
+  newTag: v0.1.4
 - name: testserver
   newName: tbn-contour-authserver
   newTag: latest

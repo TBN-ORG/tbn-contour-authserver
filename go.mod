@@ -1,4 +1,4 @@
-module github.com/projectcontour/contour-authserver
+module github.com/TBN-ORG/tbn-contour-authserver
 
 go 1.14
 

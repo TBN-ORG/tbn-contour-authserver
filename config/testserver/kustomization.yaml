@@ -8,5 +8,5 @@ resources:
 
 images:
 - name: testserver
-  newName: contour-authserver
+  newName: tbn-contour-authserver
   newTag: latest

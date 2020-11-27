@@ -28,7 +28,7 @@ RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 GO111MODULE=on make build
 # Refer to https://github.com/GoogleContainerTools/distroless for more details
 FROM gcr.io/distroless/static:nonroot
 WORKDIR /
-COPY --from=builder /workspace/bin/contour-authserver .
+COPY --from=builder /workspace/bin/tbn-contour-authserver .
 USER nonroot:nonroot
 
-ENTRYPOINT ["/contour-authserver"]
+ENTRYPOINT ["/tbn-contour-authserver"]

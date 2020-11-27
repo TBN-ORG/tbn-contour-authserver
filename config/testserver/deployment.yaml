@@ -21,7 +21,7 @@ spec:
         image: testserver
         imagePullPolicy: IfNotPresent
         command:
-        - /contour-authserver
+        - /tbn-contour-authserver
         args:
         - testserver
         - --address=:9443

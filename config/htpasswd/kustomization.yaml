@@ -10,5 +10,5 @@ resources:
 
 images:
 - name: htpasswd
-  newName: contour-authserver
+  newName: tbn-contour-authserver
   newTag: latest

@@ -30,9 +30,9 @@ import (
 
 const (
 	// AnnotationAuthType labels Secrets that can be used for basic Auth.
-	AnnotationAuthType = "projectcontour.io/auth-type"
+	AnnotationAuthType = "tbncloud.org/auth-type"
 	// AnnotationAuthRealm labels Secrets that match our authentication realm
-	AnnotationAuthRealm = "projectcontour.io/auth-realm"
+	AnnotationAuthRealm = "tbncloud.org/auth-realm"
 )
 
 // Htpasswd watches Secrets for htpasswd files and uses them for HTTP Basic Authentication.

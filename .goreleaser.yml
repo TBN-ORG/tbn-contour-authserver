@@ -1,4 +1,4 @@
-project_name: contour-authserver
+project_name: tbn-contour-authserver
 before:
   hooks:
     - go mod download
@@ -14,10 +14,10 @@ builds:
   ldflags:
   - -s
   - -w
-  - -X github.com/projectcontour/contour-authserver/pkg/version.Progname={{ .ProjectName }}
-  - -X github.com/projectcontour/contour-authserver/pkg/version.Version={{ .Env.VERSION }}
-  - -X github.com/projectcontour/contour-authserver/pkg/version.Sha={{ .Env.SHA }}
-  - -X github.com/projectcontour/contour-authserver/pkg/version.BuildDate={{ .Date }}
+  - -X github.com/TBN-ORG/tbn-contour-authserver/pkg/version.Progname={{ .ProjectName }}
+  - -X github.com/TBN-ORG/tbn-contour-authserver/pkg/version.Version={{ .Env.VERSION }}
+  - -X github.com/TBN-ORG/tbn-contour-authserver/pkg/version.Sha={{ .Env.SHA }}
+  - -X github.com/TBN-ORG/tbn-contour-authserver/pkg/version.BuildDate={{ .Date }}
 archives:
 - replacements:
     darwin: Darwin
@@ -41,16 +41,16 @@ dockers:
   dockerfile: hack/Dockerfile.release
   skip_push: true
   image_templates:
-    - "projectcontour/{{ .ProjectName }}:{{ .Env.VERSION }}"
-    - "projectcontour/{{ .ProjectName }}:latest"
+    - "TBN-ORG/{{ .ProjectName }}:{{ .Env.VERSION }}"
+    - "TBN-ORG/{{ .ProjectName }}:latest"
   build_flag_templates:
   - "--pull"
   - "--label=org.opencontainers.image.created={{.Date}}"
   - "--label=org.opencontainers.image.revision={{.FullCommit}}"
   - "--label=org.opencontainers.image.version={{.Env.VERSION}}"
-  - "--label=org.opencontainers.image.url=https://projectcontour.io/"
-  - "--label=org.opencontainers.image.documentation=https://projectcontour.io/"
-  - "--label=org.opencontainers.image.vendor=Project Contour"
+  - "--label=org.opencontainers.image.url=https://tbncloud.org/"
+  - "--label=org.opencontainers.image.documentation=https://tbncloud.org/"
+  - "--label=org.opencontainers.image.vendor=TBN Project Contour"
   - "--label=org.opencontainers.image.licenses=Apache-2.0"
-  - "--label=org.opencontainers.image.title=Contour Authserver"
-  - "--label=org.opencontainers.image.description=Contour Authorization Server"
+  - "--label=org.opencontainers.image.title=TBN Contour Authserver"
+  - "--label=org.opencontainers.image.description=TBN Version of projectcontour Contour Authorization Server"

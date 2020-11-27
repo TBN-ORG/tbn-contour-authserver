@@ -3,9 +3,9 @@ This was originally a fork from projectcontour/contour-authserver but I wanted t
 
 # contour-authserver
 
-`contour-authserver` implements the Envoy [external authorization][4]
+`tbn-contour-authserver` implements the Envoy [external authorization][4]
 GRPC protocol (both v2 and v3). It can be used for testing Envoy
-external authorization. `contour-authserver` has two authorization
+external authorization. `tbn-contour-authserver` has two authorization
 backends that are selected by subcommands.
 
 # testserver
@@ -16,7 +16,7 @@ Usage:
 Run a testing authentication server
 
 Usage:
-  contour-authserver testserver [OPTIONS]
+  tbn-contour-authserver testserver [OPTIONS]
 
 Flags:
       --address string         The address the authentication endpoint binds to. (default ":9090")
@@ -59,12 +59,12 @@ The htpasswd data must be stored in the `auth` key, which is compatible
 with ingress-nginx [`auth-file` Secrets][2].
 
 The `htpasswd` backend only accesses Secrets that are
-annotated with `projectcontour.io/auth-type: basic`.
+annotated with `tbncloud.org/auth-type: basic`.
 
-Secrets that are annotated with the `projectcontour.io/auth-realm`
+Secrets that are annotated with the `tbncloud.org/auth-realm`
 will only be used if the annotation value matches the value of the
 `--auth-realm` flag.
-The `projectcontour.io/auth-realm: *` annotation explicitly marks
+The `tbncloud.org/auth-realm: *` annotation explicitly marks
 a Secret as being valid for all realms.
 This is equivalent to omitting the annotation.
 
@@ -94,7 +94,7 @@ does.)
 
 # Deploying `contour-authserver`
 
-The recommended way to deploy `contour-authserver` is to use the Kustomize
+The recommended way to deploy `tbn-contour-authserver` is to use the Kustomize
 [deployment YAML](./config/default). This will deploy services for both
 the `testserver` and `htpasswd` backends. For developer deployments,
 [Skaffold](https://skaffold.dev/) seems to work reasonably well.
@@ -103,7 +103,7 @@ There are no versioned releases or container images yet.
 
 # Releasing `contour-authserver`
 
-Maintainers who need to release a new version of `contour-authserver`
+Maintainers who need to release a new version of `tbn-contour-authserver`
 can follow the following steps:
 
 ```bash
@@ -120,9 +120,9 @@ $ git push origin $NEWVERS
 $ make release
 
 # Log in with the Contour build account to push the images.
-$ docker login -u projectcontourbuilder
-$ docker push projectcontour/contour-authserver:$NEWVERS
-$ docker push projectcontour/contour-authserver:latest
+$ docker login -u rfinner
+$ docker push rfinner/tbn-contour-authserver:$NEWVERS
+$ docker push rfinner/tbn-contour-authserver:latest
 
 # Log out of the Contour build account.
 $ docker logout

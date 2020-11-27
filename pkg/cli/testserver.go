@@ -16,7 +16,7 @@ package cli
 import (
 	"net"
 
-	"github.com/TBN-ORG/tbn-contour-authserver/pkg/auth"
+	"github.com/tbn-org/tbn-contour-authserver/pkg/auth"
 
 	"github.com/spf13/cobra"
 	ctrl "sigs.k8s.io/controller-runtime"

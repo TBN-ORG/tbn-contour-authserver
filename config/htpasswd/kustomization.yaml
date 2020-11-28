@@ -9,6 +9,9 @@ resources:
 - rolebinding.yaml
 
 images:
+- name: controller
+  newName: rfinner/contour-authserver
+  newTag: "1.7"
 - name: htpasswd
-  newName: rfinner/tbn-contour-authserver
-  newTag: "1.6"
+  newName: rfinner/contour-authserver
+  newTag: "1.7"

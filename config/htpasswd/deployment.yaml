@@ -20,7 +20,7 @@ spec:
         image: htpasswd
         imagePullPolicy: IfNotPresent
         command:
-        - /tbn-contour-authserver
+        - /contour-authserver
         args:
         - htpasswd
         - --address=:9443

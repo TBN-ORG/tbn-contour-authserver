@@ -5,9 +5,9 @@ else
 GOBIN=$(shell go env GOBIN)
 endif
 
-BIN := tbn-contour-authserver
+BIN := contour-authserver
 
-REPO := github.com/tbn-org/tbn-contour-authserver
+REPO := github.com/tbn-org/contour-authserver
 SHA := $(shell git rev-parse --short=8 HEAD)
 VERSION := $(shell git describe --exact-match 2>/dev/null || basename $$(git describe --all --long 2>/dev/null))
 BUILDDATE := $(shell TZ=GMT date '+%Y-%m-%dT%R:%S%z')

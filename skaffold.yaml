@@ -1,10 +1,10 @@
 apiVersion: skaffold/v2beta5
 kind: Config
 metadata:
-  name: tbn-contour-authserver
+  name: contour-authserver
 build:
   artifacts:
-  - image: tbn-contour-authserver
+  - image: contour-authserver
 deploy:
   kustomize:
     paths:

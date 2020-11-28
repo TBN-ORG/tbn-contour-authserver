@@ -1,11 +1,8 @@
-# tbn-contour-authserver
-This was originally a fork from projectcontour/contour-authserver but I wanted to learn more about using PR with gitops tools without mistakenly issuing a PR back to projectcontour and so I no longer fork this repo from projectcontour.
-
 # contour-authserver
 
-`tbn-contour-authserver` implements the Envoy [external authorization][4]
+`contour-authserver` implements the Envoy [external authorization][4]
 GRPC protocol (both v2 and v3). It can be used for testing Envoy
-external authorization. `tbn-contour-authserver` has two authorization
+external authorization. `contour-authserver` has two authorization
 backends that are selected by subcommands.
 
 # testserver
@@ -16,7 +13,7 @@ Usage:
 Run a testing authentication server
 
 Usage:
-  tbn-contour-authserver testserver [OPTIONS]
+  contour-authserver testserver [OPTIONS]
 
 Flags:
       --address string         The address the authentication endpoint binds to. (default ":9090")
@@ -94,7 +91,7 @@ does.)
 
 # Deploying `contour-authserver`
 
-The recommended way to deploy `tbn-contour-authserver` is to use the Kustomize
+The recommended way to deploy `contour-authserver` is to use the Kustomize
 [deployment YAML](./config/default). This will deploy services for both
 the `testserver` and `htpasswd` backends. For developer deployments,
 [Skaffold](https://skaffold.dev/) seems to work reasonably well.
@@ -103,7 +100,7 @@ There are no versioned releases or container images yet.
 
 # Releasing `contour-authserver`
 
-Maintainers who need to release a new version of `tbn-contour-authserver`
+Maintainers who need to release a new version of `contour-authserver`
 can follow the following steps:
 
 ```bash
@@ -121,8 +118,8 @@ $ make release
 
 # Log in with the Contour build account to push the images.
 $ docker login -u rfinner
-$ docker push rfinner/tbn-contour-authserver:$NEWVERS
-$ docker push rfinner/tbn-contour-authserver:latest
+$ docker push rfinner/contour-authserver:$NEWVERS
+$ docker push rfinner/contour-authserver:latest
 
 # Log out of the Contour build account.
 $ docker logout

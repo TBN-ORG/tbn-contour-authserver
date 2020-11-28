@@ -1,5 +1,5 @@
 # Adds namespace to all resources.
-namespace: tbn-projectcontour-auth
+namespace: projectcontour-auth
 
 bases:
 - ../testserver

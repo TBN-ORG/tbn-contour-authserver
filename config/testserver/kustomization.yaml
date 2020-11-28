@@ -7,9 +7,6 @@ resources:
 - certificate.yaml
 
 images:
-- name: controller
-  newName: rfinner/contour-authserver
-  newTag: "1.7"
 - name: testserver
   newName: rfinner/contour-authserver
   newTag: "1.7"

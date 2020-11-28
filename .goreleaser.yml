@@ -14,10 +14,10 @@ builds:
   ldflags:
   - -s
   - -w
-  - -X github.com/tbn-org/contour-authserver/pkg/version.Progname={{ .ProjectName }}
-  - -X github.com/tbn-org/contour-authserver/pkg/version.Version={{ .Env.VERSION }}
-  - -X github.com/tbn-org/contour-authserver/pkg/version.Sha={{ .Env.SHA }}
-  - -X github.com/tbn-org/contour-authserver/pkg/version.BuildDate={{ .Date }}
+  - -X github.com/projectcontour/contour-authserver/pkg/version.Progname={{ .ProjectName }}
+  - -X github.com/projectcontour/contour-authserver/pkg/version.Version={{ .Env.VERSION }}
+  - -X github.com/projectcontour/contour-authserver/pkg/version.Sha={{ .Env.SHA }}
+  - -X github.com/projectcontour/contour-authserver/pkg/version.BuildDate={{ .Date }}
 archives:
 - replacements:
     darwin: Darwin
@@ -41,8 +41,8 @@ dockers:
   dockerfile: hack/Dockerfile.release
   skip_push: true
   image_templates:
-    - "tbn-org/{{ .ProjectName }}:{{ .Env.VERSION }}"
-    - "tbn-org/{{ .ProjectName }}:latest"
+    - "rfinner/{{ .ProjectName }}:{{ .Env.VERSION }}"
+    - "rfinner/{{ .ProjectName }}:latest"
   build_flag_templates:
   - "--pull"
   - "--label=org.opencontainers.image.created={{.Date}}"

@@ -17,8 +17,8 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/tbn-org/tbn-contour-authserver/pkg/auth"
-	"github.com/tbn-org/tbn-contour-authserver/pkg/version"
+	"github.com/projectcontour/contour-authserver/pkg/auth"
+	"github.com/projectcontour/contour-authserver/pkg/version"
 
 	"github.com/spf13/cobra"
 	"google.golang.org/grpc"

@@ -16,7 +16,7 @@ package cli
 import (
 	"net"
 
-	"github.com/tbn-org/tbn-contour-authserver/pkg/auth"
+	"github.com/projectcontour/contour-authserver/pkg/auth"
 
 	"github.com/spf13/cobra"
 	"k8s.io/apimachinery/pkg/labels"

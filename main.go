@@ -18,8 +18,8 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/tbn-org/contour-authserver/pkg/cli"
-	"github.com/tbn-org/contour-authserver/pkg/version"
+	"github.com/projectcontour/contour-authserver/pkg/cli"
+	"github.com/projectcontour/contour-authserver/pkg/version"
 
 	"github.com/mattn/go-isatty"
 	"github.com/spf13/cobra"

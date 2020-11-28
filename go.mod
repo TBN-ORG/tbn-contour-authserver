@@ -1,4 +1,4 @@
-module github.com/tbn-org/contour-authserver
+module github.com/projectcontour/contour-authserver
 
 go 1.14
 
@@ -8,7 +8,6 @@ require (
 	github.com/mattn/go-isatty v0.0.8
 	github.com/spf13/cobra v1.0.0
 	github.com/stretchr/testify v1.4.0
-	github.com/tbn-org/tbn-contour-authserver v0.1.6
 	github.com/tg123/go-htpasswd v1.0.0
 	golang.org/x/crypto v0.0.0-20200622213623-75b288015ac9 // indirect
 	google.golang.org/genproto v0.0.0-20190819201941-24fa4b261c55

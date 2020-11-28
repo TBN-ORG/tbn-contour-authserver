@@ -56,12 +56,12 @@ The htpasswd data must be stored in the `auth` key, which is compatible
 with ingress-nginx [`auth-file` Secrets][2].
 
 The `htpasswd` backend only accesses Secrets that are
-annotated with `tbncloud.org/auth-type: basic`.
+annotated with `projectcontour.io/auth-type: basic`.
 
-Secrets that are annotated with the `tbncloud.org/auth-realm`
+Secrets that are annotated with the `projectcontour.io/auth-realm`
 will only be used if the annotation value matches the value of the
 `--auth-realm` flag.
-The `tbncloud.org/auth-realm: *` annotation explicitly marks
+The `projectcontour.io/auth-realm: *` annotation explicitly marks
 a Secret as being valid for all realms.
 This is equivalent to omitting the annotation.
 
@@ -117,9 +117,9 @@ $ git push origin $NEWVERS
 $ make release
 
 # Log in with the Contour build account to push the images.
-$ docker login -u rfinner
-$ docker push rfinner/contour-authserver:$NEWVERS
-$ docker push rfinner/contour-authserver:latest
+$ docker login -u projectcontourbuilder
+$ docker push projectcontour/contour-authserver:$NEWVERS
+$ docker push projectcontour/contour-authserver:latest
 
 # Log out of the Contour build account.
 $ docker logout

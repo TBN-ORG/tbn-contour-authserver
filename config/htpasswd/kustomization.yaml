@@ -10,5 +10,5 @@ resources:
 
 images:
 - name: htpasswd
-  newName: tbn-contour-authserver
-  newTag: latest
+  newName: rfinner/tbn-contour-authserver
+  newTag: "1.6"
